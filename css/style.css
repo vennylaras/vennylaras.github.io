@@ -13,3 +13,7 @@
 .name {
     text-align: center;
 }
+
+.intro ul {
+    padding-left: 0px;
+}
