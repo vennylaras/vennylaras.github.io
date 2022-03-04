@@ -1,0 +1,3 @@
+[submodule "gruvhugo"]
+	path = themes/gruvhugo
+	url = https://gitlab.com/avron/gruvhugo.git
