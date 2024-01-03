@@ -1,139 +1,65 @@
-# Hey, thanks for using my theme. If you like this theme,checkout my repo (https://gitlab.com/avron/gruvhugo"
-# and drop a star while you're at it. ;)
-baseurl = "https://vennylaras.github.io/"
-title = "Venny Ayudiani"
-languageCode = "en-us"
-paginate = "10" # Number of posts per page
-#disqusShortname = "" # Enable comments by entering your Disqus shortname
-#googleAnalytics = "" # Enable Google Analytics by entering your tracking id
-#-------------------------------------------------------------------------------
-# DEFAULT SETTINGS
-#-------------------------------------------------------------------------------
+baseURL = 'https://maverick.canhtran.me'
+languageCode = 'en-us'
+title = 'Maverick'
+paginate = 3
+theme = 'maverick'
 
-# Default Theme
-theme= "gruvhugo"
+[permalinks]
+  pages = "/:slug"
 
-# Default Post Extension
-defaultExtension= "html"
+[params]
+  logo = '/assets/favicon.ico'
+  description = "A minimal hugo theme focus on content"
+  author = 'Calvin Tran'
 
-# Default metadata format for newly created frontmatter using
-# hugo new command. "toml", "yaml", or "json"
-metaDataFormat= "yaml"
+  # [params.comments]
+  #   githubRepo = 'canhtran/maverick'
+  #   theme = 'github-light'
 
-# [taxonomies]
-#   tag      = "tags"
-#   category = "categories"
-#   series   = "series"
 
-[params.main]
-  enabled = true
-  enableKatex = true
-  headerTitle = "Venny Ayudiani"
-  name = "vayudiani"
-  img = "images/author.jpeg"
-  img_title = "Profile picture"
-  icon = "images/logo.png"
-  quote = "Hello, I'm Venny!"
-  descriptions= [
-    "I'm a Masters' student at Carnegie Mellon University School of Computer Science, majoring in Computational Data Science with a concentration on Analytics. Through my coursework and projects at CMU, I have experience with data analysis, data visualization, cloud computing, and machine learning.",
-    "Previously, I graduated from Institut Teknologi Bandung with a Bachelor's degree in Computer Science. Then, I worked as a Software Engineer for 3+ years focusing on backend web development and building applications using a low-code platform, OutSystems."
-  ]
-  licenseUrl = ""
-  resumeText="Learn more about me"
-  resumeUrl="https://drive.google.com/file/d/13VDweRwg0FWtDxEoaPuKfOYSkODQCsTP/view?usp=sharing"
-
- # Social icons
-  [[params.social]]
-    name = "email"
-    url  = "mailto:vayudian@andrew.cmu.edu"
-
-  [[params.social]]
-    name = "github"
-    url  = "https://github.com/vennylaras/"
-
-  [[params.social]]
-    name = "linkedin"
-    url  = "https://www.linkedin.com/in/vayudiani"
-
-[params.style]
-  # add path to custom CSS files here
-  custom_css = ['css/style.css']
-  # add path to custom SCSS files here
-  custom_scss = []
-
-# [menu]
-  # [[menu.main]]
-  #   identifier = "about"
-  #   name       = "About"
-  #   url        = "about"
-
-  # [[menu.main]]
-  #   identifier = "posts"
-  #   name       = "Posts"
-  #   url        = "post/"
-
-  # [[menu.main]]
-  #   identifier = "wiki"
-  #   name       = "Wiki"
-  #   url        = "none"
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = "-110"
+  [[menu.main]]
+    identifier = "posts"
+    name = "Post"
+    url = "/posts/"
+    weight = -200
 
 [markup]
-  defaultMarkdownHandler = "goldmark"
-  [markup.asciidocExt]
-    backend = "html5"
-    docType = "article"
-    extensions = []
-    failureLevel = "fatal"
-    noHeaderOrFooter = true
-    safeMode = "unsafe"
-    sectionNumbers = false
-    trace = false
-    verbose = true
-    workingFolderCurrent = false
-    [markup.asciidocExt.attributes]
-  [markup.blackFriday]
-    angledQuotes = false
-    footnoteAnchorPrefix = ""
-    footnoteReturnLinkContents = ""
-    fractions = true
-    hrefTargetBlank = false
-    latexDashes = true
-    nofollowLinks = false
-    noreferrerLinks = false
-    plainIDAnchors = true
-    skipHTML = false
-    smartDashes = true
-    smartypants = true
-    smartypantsQuotesNBSP = false
-    taskLists = true
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      definitionList = true
-      footnote = true
-      linkify = true
-      strikethrough = true
-      table = true
-      taskList = true
-      typographer = true
-    [markup.goldmark.parser]
-      attribute = true
-      autoHeadingID = true
-      autoHeadingIDType = "github"
-    [markup.goldmark.renderer]
-      hardWraps = false
-      unsafe = false
-      xhtml = false
+  [markup.goldmark.renderer]
+    unsafe = true
   [markup.highlight]
+    anchorLineNos = false
     codeFences = true
     guessSyntax = false
-    hl_Lines = ""
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
     lineNoStart = 1
     lineNos = false
     lineNumbersInTable = true
     noClasses = true
-    style = "monokai"
+    noHl = false
+    style = 'monokailight'
     tabWidth = 4
-  [markup.tableOfContents]
-    endLevel = 3
-    ordered = false
-    startLevel = 2
+
+[taxonomies]
+  tag = "tags"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML"]
+
+[outputFormats.RSS]
+  mediatype = "application/rss"
+  baseName = "atom"
+
+[outputFormats.JSON]
+  mediatype = "application/json"
+  baseName = "feed"
+
+ignoreErrors = ["error-remote-getjson"]
