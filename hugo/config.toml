@@ -1,6 +1,6 @@
-baseURL = 'https://maverick.canhtran.me'
+baseURL = 'https://vennylaras.github.io'
 languageCode = 'en-us'
-title = 'Maverick'
+title = 'Venny Ayudiani'
 paginate = 3
 theme = 'maverick'
 
@@ -9,8 +9,8 @@ theme = 'maverick'
 
 [params]
   logo = '/assets/favicon.ico'
-  description = "A minimal hugo theme focus on content"
-  author = 'Calvin Tran'
+  description = "A Landing Page"
+  author = 'Venny Ayudiani'
 
   # [params.comments]
   #   githubRepo = 'canhtran/maverick'
@@ -19,14 +19,14 @@ theme = 'maverick'
 
 [menu]
   [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
+    identifier = "software"
+    name = "Software"
+    url = "/software/"
     weight = "-110"
   [[menu.main]]
-    identifier = "posts"
-    name = "Post"
-    url = "/posts/"
+    identifier = "data"
+    name = "Data"
+    url = "/data/"
     weight = -200
 
 [markup]
