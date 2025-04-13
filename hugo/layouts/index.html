@@ -1,18 +1,13 @@
-{{define "main"}}
-<div class="intro" style="align-items: center">
-  {{if .Site.Params.main.enabled }}
-  <img class="image" src='{{ .Site.Params.main.img | absURL }}' 
-	title="{{	.Site.Params.main.img_title }}" width="200px" 
-	alt="Author's picture or avatar or logo"/>
-  <ul>
-    <li class="intro-quote">{{ .Site.Params.main.quote }}</li>
-  </ul>
-  {{end}}
-  {{ range .Site.Params.main.descriptions}}
-  <p>{{ . | safeHTML }}</p>
-  {{ end}}
-  <p><a href='{{ .Site.Params.main.resumeUrl }}' target="_blank">{{ .Site.Params.main.resumeText}}</a></p>
-</div>
-{{ partial "menu.html" . }}
-{{end}}
-
+<!doctype html>
+<html lang="en">
+  {{ partial "head.html" . }}
+<body>
+  <a class="skip-link" href="#main">Skip to main</a>
+  <main id="main">
+    <div class="content">
+      {{ partial "header.html" . }}
+      {{ .Content }}
+    </div>
+  </main>
+</body>
+</html>
