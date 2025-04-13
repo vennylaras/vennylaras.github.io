@@ -1,0 +1,19 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  "title": "Venny Ayudiani",
+  "home_page_url": "https://vennylaras.github.io/",
+  "feed_url": "https://vennylaras.github.io/feed.json",
+  "description": "A Landing Page",
+  "favicon": "https://vennylaras.github.io//assets/favicon.ico",
+  "expired": false,
+  "author": {
+    "name": "Venny Ayudiani",
+    "url": "https://vennylaras.github.io/"
+  },
+  "items": [
+    
+    
+
+    
+  ]
+}
